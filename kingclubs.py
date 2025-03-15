@@ -80,7 +80,6 @@ def issue_book():
         return
     
     borrow_date = datetime.now().strftime("%Y-%m-%d")
-    # Устанавливаем фиксированный срок возврата (например, через 14 дней вручную)
     return_date = datetime.strptime(borrow_date, "%Y-%m-%d")
     return_date = (return_date.replace(day=return_date.day + 14)).strftime("%Y-%m-%d")
     
@@ -131,13 +130,13 @@ def view_borrowing_history():
 
 def main():
     while True:
-        print("\n1. Добавить книгу")
-        print("2. Зарегистрировать пользователя")
-        print("3. Выдать книгу")
-        print("4. Вернуть книгу")
-        print("5. Показать доступные книги")
-        print("6. Показать историю выдачи")
-        print("7. Выход")
+        print("\n1 Добавить книгу")
+        print("2 Зарегистрировать пользователя")
+        print("3 Выдать книгу")
+        print("4 Вернуть книгу")
+        print("5 Показать доступные книги")
+        print("6 Показать историю выдачи")
+        print("7 Выход")
         
         choice = input("Выберите действие (1-7): ")
         
@@ -156,7 +155,7 @@ def main():
         elif choice == '7':
             break
         else:
-            print("Неверный выбор!")
+            print("sefh yazmisan")
 
     conn.close()
 
